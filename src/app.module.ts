@@ -5,7 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Clients, ClientSchema } from './clients/clients';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb+srv://locoscrafteros96:161481AaCc@cluster0.asagbbp.mongodb.net/?retryWrites=true&w=majority', {
+  imports: [MongooseModule.forRoot('mongodb+srv://locoscrafteros96:123456xx@cluster0.asagbbp.mongodb.net/?retryWrites=true&w=majority', {
   }),
   MongooseModule.forFeature([{ name: Clients.name, schema: ClientSchema }]),],
   controllers: [ClientsController],
