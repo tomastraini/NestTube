@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
-import { ClientsController } from './clients/clients.controller';
-import { ClientsService } from './clients/clients.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Clients, ClientSchema } from './clients/clients';
+import { PartsController } from './Controllers/parts.controller';
+import { PartsService } from './Services/parts.service';
+import { Parts, PartsSchema } from './Models/parts';
 
 @Module({
   imports: [MongooseModule.forRoot('mongodb+srv://locoscrafteros96:fYO4PMcPGfxLBPVf@cluster0.asagbbp.mongodb.net/?retryWrites=true&w=majority', {
   }),
-  MongooseModule.forFeature([{ name: Clients.name, schema: ClientSchema }]),],
-  controllers: [ClientsController],
-  providers: [ClientsService],
+  MongooseModule.forFeature([{ name: Parts.name, schema: PartsSchema }])],
+  controllers: [PartsController],
+  providers: [PartsService]
 })
 
 export class AppModule {}
